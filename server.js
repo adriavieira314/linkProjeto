@@ -61,4 +61,4 @@ app.get('/dados', (request, response) => {
 
 app.get('/', (request, response) => response.sendFile(path.join(__dirname+'/dist/CalculadoraSolar/index.html')));
 
-app.listen(ProgressEvent, () => console.info(`Servidor rodando na porta: ${port}`));
+app.listen(port, () => console.info(`Servidor rodando na porta: ${port}`));
