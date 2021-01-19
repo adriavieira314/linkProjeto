@@ -1,14 +1,14 @@
-const express = require('express'),
-  cors = require('cors'),
-  https = require('https'),
-  axios = require('axios'),
-  fs = require('fs'),
-  parser = require('xml2js').parseString,
-  app = express(),
-  path = require('path'),
-  cron = require('cron').CronJob,
-  json = require('./temp/arquivo.json') || "",
-  port = process.env.PORT || 8080;
+const express = require('express');
+const cors = require('cors');
+const https = require('https');
+const axios = require('axios');
+const fs = require('fs');
+const parser = require('xml2js').parseString;
+const app = express();
+const path = require('path');
+const cron = require('cron').CronJob;
+const json = require('./temp/arquivo.json') || "";
+const port = process.env.PORT || 8080;
 
 app.use(cors());
 
