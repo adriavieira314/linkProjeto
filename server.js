@@ -47,18 +47,18 @@ function convertToJSON() {
 
 //0 5 * * * inicia a busca as 5horas da manhã
 
-new cron('30 18 * * *', () => {
+new cron('20 19 * * *', () => {
   console.log('Fetch da API iniciado.');
   saveXML();
 }).start();
 
 app.use(express.json());
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static('./dist/CalculadoraSolar'));
 
 app.get('/dados', (request, response) => {
   response.status(200).json(json);
 });
 
-app.get('/', (request, response) => response.sendFile(path.join(__dirname+'/dist/CalculadoraSolar/index.html')));
+app.get('/', (request, response) => response.sendFile('./dist/CalculadoraSolar/index.html'));
 
 app.listen(port, () => console.info(`Servidor rodando na porta: ${port}`));
